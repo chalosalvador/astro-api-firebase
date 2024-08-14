@@ -22,7 +22,29 @@ export default function Form() {
           setFormRes(new Map([["POST", responseJson]]))
         }}
       >
-        <input type="text" name="name" value="value" readOnly />
+				<label htmlFor="name">Name</label>
+        <input type="text" name="name" id="name" value="value" />
+
+				{/* Lastname */}
+				<label htmlFor="lastname">Lastname</label>
+				<input type="text" name="lastname" id="lastname" value="value" />
+
+				{/* Email */}
+				<label htmlFor="email">Email</label>
+				<input type="email" name="email" id="email" value="value@gmail.com" />
+				
+				{/* City */}
+				<label htmlFor="city">City</label>
+				<select name="city" id="city">
+					<option value="1">New York</option>
+					<option value="2">Los Angeles</option>
+					<option value="3">Chicago</option>
+				</select>
+
+				{/* Message */}
+				<label htmlFor="message">Message</label>
+				<textarea name="message" id="message">Message</textarea>
+
 
         <button type="submit">POST</button>
 
